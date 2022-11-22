@@ -1,0 +1,2 @@
+﻿  zad_m1.cpp
+C:\Users\radek\OneDrive\Pulpit\c++\zad_m1\zad_m1.cpp(6): error C4700: uninitialized local variable 'po' used

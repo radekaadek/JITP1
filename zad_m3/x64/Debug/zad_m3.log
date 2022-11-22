@@ -1,0 +1,3 @@
+﻿  zad_m3.cpp
+C:\Users\radek\OneDrive\Pulpit\c++\zad_m3\zad_m3.cpp(11,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  zad_m3.vcxproj -> C:\Users\radek\OneDrive\Pulpit\c++\zad_m3\x64\Debug\zad_m3.exe
