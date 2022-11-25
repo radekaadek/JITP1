@@ -12,7 +12,6 @@ gi_date::gi_date(int day, int month, int year) {
 }
 
 
-// get year from days since 1.1.2020
 int gi_date::get_year() const {
 	int year = 2020;
 	int days = days_since_start + 1;
@@ -22,6 +21,7 @@ int gi_date::get_year() const {
 	}
 	return year;
 }
+
 
 int gi_date::get_month() const {
 	int current_year = get_year();
@@ -35,6 +35,7 @@ int gi_date::get_month() const {
 	}
 	return month;
 }
+
 
 int gi_date::get_day() const {
 	int current_year = get_year();
@@ -113,31 +114,45 @@ int gi_date::days_in_month(int month, int year) {
 }
 
 
-bool operator==(const gi_date& left, const gi_date& right){
+bool operator==(const gi_date& left, const gi_date& right) {
 	return left.days_since_start == right.days_since_start;
 }
 
 
-bool operator!=(const gi_date& left, const gi_date& right){
+bool operator!=(const gi_date& left, const gi_date& right) {
 	return left.days_since_start != right.days_since_start;
 }
 
 
-bool operator<(const gi_date& left, const gi_date& right){
+bool operator<(const gi_date& left, const gi_date& right) {
 	return left.days_since_start < right.days_since_start;
 }
 
 
-int operator-(const gi_date& left, const gi_date& right){
+bool operator>(const gi_date& left, const gi_date& right) {
+	return left.days_since_start > right.days_since_start;
+}
+
+
+bool operator<=(const gi_date& left, const gi_date& right) {
+	return left.days_since_start <= right.days_since_start;
+}
+
+
+bool operator>=(const gi_date& left, const gi_date& right) {
+	return left.days_since_start >= right.days_since_start;
+}
+
+
+int operator-(const gi_date& left, const gi_date& right) {
 	return left.days_since_start - right.days_since_start;
 }
 
 
-std::ostream& operator<<(std::ostream& os, const gi_date& right){
-	os << right.get_day() << "." << right.get_month() << "." << right.get_year();
+std::ostream& operator<<(std::ostream& os, const gi_date& dt){
+	os << dt.get_day() << "." << dt.get_month() << "." << dt.get_year();
 	return os;
 }
-
 
 constexpr int gi_date::last_day_since() {
 	int sum = 0;
@@ -153,5 +168,5 @@ const std::vector<int> gi_date::days_in_months
 
 
 int gi_date::days_in_year(int year) {
-    return is_leap_year(year) ? 366 : 365;
+	return is_leap_year(year) ? 366 : 365;
 }

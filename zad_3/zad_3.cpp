@@ -48,7 +48,6 @@ void test_next_day(int day, int month, int year, int next_day, int next_month, i
 int main()
 {
 
-
 	test_next_day(1, 1, 2020, 2, 1, 2020);
 	test_next_day(31, 1, 2020, 1, 2, 2020);
 	test_next_day(28, 2, 2020, 29, 2, 2020);
