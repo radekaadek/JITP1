@@ -1,3 +1,5 @@
+// Radoslaw Dabkowski (325683)
+
 #include "gi_date.h"
 
 
@@ -24,10 +26,12 @@ int gi_date::get_year() const {
 
 
 int gi_date::get_month() const {
-	int current_year = get_year();
+	int current_year = 2020;
 	int days = days_since_start + 1;
-	for (int year = 2020; year < current_year; ++year)
-		days -= days_in_year(year);
+	while (days > days_in_year(current_year)) {
+		days -= days_in_year(current_year);
+		++current_year;
+	}
 	int month = 1;
 	while (days > days_in_month(month, current_year)) {
 		days -= days_in_month(month, current_year);
@@ -38,13 +42,17 @@ int gi_date::get_month() const {
 
 
 int gi_date::get_day() const {
-	int current_year = get_year();
-	int current_month = get_month();
+	int current_year = 2020;
 	int days = days_since_start + 1;
-	for (int year = 2020; year < current_year; ++year)
-		days -= days_in_year(year);
-	for (int month = 1; month < current_month; ++month)
+	while (days > days_in_year(current_year)) {
+		days -= days_in_year(current_year);
+		++current_year;
+	}
+	int month = 1;
+	while (days > days_in_month(month, current_year)) {
 		days -= days_in_month(month, current_year);
+		++month;
+	}
 	return days;
 }
 
@@ -64,15 +72,19 @@ void gi_date::prev_day() {
 
 
 gi_date& gi_date::operator+=(int days) {
-	days_since_start = last_day_since() < days_since_start + days ?
-		last_day_since() : days_since_start + days;
+	days_since_start += days;
+	days_since_start < 0 ? days_since_start = 0 : days_since_start;
+	days_since_start > last_day_since() ?
+		days_since_start = last_day_since() : days_since_start;
 	return *this;
 }
 
 
 gi_date& gi_date::operator-=(int days) {
-	days_since_start = days_since_start - days < 0 ?
-		0 : days_since_start - days;
+	days_since_start -= days;
+	days_since_start < 0 ? days_since_start = 0 : days_since_start;
+	days_since_start > last_day_since() ?
+		days_since_start = last_day_since() : days_since_start;
 	return *this;
 }
 
@@ -156,7 +168,7 @@ std::ostream& operator<<(std::ostream& os, const gi_date& dt){
 
 constexpr int gi_date::last_day_since() {
 	int sum = 0;
-	for (int year = 2020; year < 2024; ++year) {
+	for (int year = 2020; year <= 2023; ++year) {
 		sum += days_in_year(year);
 	}
 	return sum - 1;

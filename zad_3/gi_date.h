@@ -1,3 +1,5 @@
+// Radoslaw Dabkowski (325683)
+
 #pragma once
 
 #include <iostream>
@@ -33,6 +35,7 @@ public:
 private:
     int days_since_start;
     static constexpr int last_day_since();
+    static int reduce_years(int days);
     static const std::vector<int> days_in_months;
     static int days_in_year(int year);
 };

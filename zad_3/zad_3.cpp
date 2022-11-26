@@ -47,6 +47,16 @@ void test_next_day(int day, int month, int year, int next_day, int next_month, i
 
 int main()
 {
+	gi_date dt(1, 1, 2020);
+	dt -= 5;
+	cout << dt.get_day() << "." << dt.get_month() << "." << dt.get_year() << endl;
+	dt += -5;
+	cout << dt.get_day() << "." << dt.get_month() << "." << dt.get_year() << endl;
+	gi_date dt2(30, 12, 2023);
+	dt2 += 5;
+	cout << dt2.get_day() << "." << dt2.get_month() << "." << dt2.get_year() << endl;
+	dt2 -= -5;
+	cout << dt2.get_day() << "." << dt2.get_month() << "." << dt2.get_year() << endl;
 
 	test_next_day(1, 1, 2020, 2, 1, 2020);
 	test_next_day(31, 1, 2020, 1, 2, 2020);
