@@ -47,16 +47,87 @@ void test_next_day(int day, int month, int year, int next_day, int next_month, i
 
 int main()
 {
-	gi_date dt(1, 1, 2020);
-	dt -= 5;
-	cout << dt.get_day() << "." << dt.get_month() << "." << dt.get_year() << endl;
-	dt += -5;
-	cout << dt.get_day() << "." << dt.get_month() << "." << dt.get_year() << endl;
-	gi_date dt2(30, 12, 2023);
-	dt2 += 5;
-	cout << dt2.get_day() << "." << dt2.get_month() << "." << dt2.get_year() << endl;
-	dt2 -= -5;
-	cout << dt2.get_day() << "." << dt2.get_month() << "." << dt2.get_year() << endl;
+	gi_date dt(31, 12, 2023);
+	dt -= 1;
+	if (dt.get_day() != 30) {
+		cout << "error: invalid day " << dt.get_day() << " instead of " << 30 << " for: " << 31 << "." << 12 << "." << 2023 << endl;
+	}
+	if (dt.get_month() != 12) {
+		cout << "error: invalid month " << dt.get_month() << " instead of " << 12 << " for: " << 31 << "." << 12 << "." << 2023 << endl;
+	}
+	if (dt.get_year() != 2023) {
+		cout << "error: invalid year " << dt.get_year() << " instead of " << 2023 << " for: " << 31 << "." << 12 << "." << 2023 << endl;
+	}
+	dt += 1;
+	if (dt.get_day() != 31) {
+		cout << "error: invalid day " << dt.get_day() << " instead of " << 31 << " for: " << 31 << "." << 12 << "." << 2023 << endl;
+	}
+	if (dt.get_month() != 12) {
+		cout << "error: invalid month " << dt.get_month() << " instead of " << 12 << " for: " << 31 << "." << 12 << "." << 2023 << endl;
+	}
+	if (dt.get_year() != 2023) {
+		cout << "error: invalid year " << dt.get_year() << " instead of " << 2023 << " for: " << 31 << "." << 12 << "." << 2023 << endl;
+	}
+
+	for (int i = 0; i <= 10000; i++) {
+		dt += i;
+		if (dt.get_day() != 31 || dt.get_month() != 12 || dt.get_year() != 2023) {
+			cout << "error: invalid date " << dt << " a of 31.12." << 2023 << endl;
+		}
+	}
+	for (int i = INT32_MAX - 10; i < INT32_MAX; i++) {
+		dt += i;
+		if (dt.get_day() != 31 || dt.get_month() != 12 || dt.get_year() != 2023) {
+			cout << "error: invalid date " << dt << " instead of 31.12." << 2023 << endl;
+		}
+	}
+	for (int i = 0; i <= 10000; i++) {
+		dt -= -i;
+		if (dt.get_day() != 31 || dt.get_month() != 12 || dt.get_year() != 2023) {
+			cout << "error: invalid date " << dt << " a of 31.12." << 2023 << endl;
+		}
+	}
+	for (int i = INT32_MAX - 10; i < INT32_MAX; i++) {
+		dt -= -i;
+		if (dt.get_day() != 31 || dt.get_month() != 12 || dt.get_year() != 2023) {
+			cout << "error: invalid date " << dt << " instead of 31.12." << 2023 << endl;
+		}
+	}
+	dt += INT32_MAX;
+	
+	if (dt.get_day() != 31 || dt.get_month() != 12 || dt.get_year() != 2023) {
+		cout << "error: invalid date " << dt << " 645 of 31.12." << 2023 << endl;
+	}
+	gi_date dt2(1, 1, 2020);
+	for (int i = 0; i <= 10000; i++) {
+		dt2 -= i;
+		if (dt2.get_day() != 1 || dt2.get_month() != 1 || dt2.get_year() != 2020) {
+			cout << "error: invalid date " << dt2 << " instead of 1.1." << 2020 << endl;
+		}
+	}
+	for (int i = INT32_MAX - 10; i < INT32_MAX; i++) {
+		dt2 -= i;
+		if (dt2.get_day() != 1 || dt2.get_month() != 1 || dt2.get_year() != 2020) {
+			cout << "error: invalid date " << dt2 << " instead of 1.1." << 2020 << endl;
+		}
+	}
+	for (int i = 0; i <= 10000; i++) {
+		dt2 += -i;
+		if (dt2.get_day() != 1 || dt2.get_month() != 1 || dt2.get_year() != 2020) {
+			cout << "error: invalid date " << dt2 << " instead of 1.1." << 2020 << endl;
+		}
+	}
+	for (int i = INT32_MAX - 10; i < INT32_MAX; i++) {
+		dt2 += -i;
+		if (dt2.get_day() != 1 || dt2.get_month() != 1 || dt2.get_year() != 2020) {
+			cout << "error: invalid date " << dt2 << " instead of 1.1." << 2020 << endl;
+		}
+	}
+	
+	dt2 -= INT32_MAX;
+	if (dt2.get_day() != 1 || dt2.get_month() != 1 || dt2.get_year() != 2020) {
+		cout << "error: invalid date " << dt2 << " instead of 1.1." << 2020 << endl;
+	}
 
 	test_next_day(1, 1, 2020, 2, 1, 2020);
 	test_next_day(31, 1, 2020, 1, 2, 2020);

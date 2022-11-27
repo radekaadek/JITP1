@@ -72,6 +72,10 @@ void gi_date::prev_day() {
 
 
 gi_date& gi_date::operator+=(int days) {
+	if (days > last_day_since()) {
+		days_since_start = 0;
+	}
+	
 	days_since_start += days;
 	days_since_start < 0 ? days_since_start = 0 : days_since_start;
 	days_since_start > last_day_since() ?
@@ -81,6 +85,10 @@ gi_date& gi_date::operator+=(int days) {
 
 
 gi_date& gi_date::operator-=(int days) {
+	if (-days > last_day_since()) {
+		days_since_start = 0;
+	}
+
 	days_since_start -= days;
 	days_since_start < 0 ? days_since_start = 0 : days_since_start;
 	days_since_start > last_day_since() ?
@@ -167,11 +175,7 @@ std::ostream& operator<<(std::ostream& os, const gi_date& dt){
 }
 
 constexpr int gi_date::last_day_since() {
-	int sum = 0;
-	for (int year = 2020; year <= 2023; ++year) {
-		sum += days_in_year(year);
-	}
-	return sum - 1;
+	return 365 * 3 + 366 - 1;
 }
 
 
