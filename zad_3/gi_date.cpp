@@ -58,7 +58,7 @@ int gi_date::get_day() const {
 
 
 void gi_date::next_day() {
-	if (days_since_start < last_day_since()) {
+	if (days_since_start < last_day_since) {
 		++days_since_start;
 	}
 }
@@ -72,27 +72,27 @@ void gi_date::prev_day() {
 
 
 gi_date& gi_date::operator+=(int days) {
-	if (days > last_day_since()) {
+	if (days > last_day_since) {
 		days_since_start = 0;
 	}
 	
 	days_since_start += days;
 	days_since_start < 0 ? days_since_start = 0 : days_since_start;
-	days_since_start > last_day_since() ?
-		days_since_start = last_day_since() : days_since_start;
+	days_since_start > last_day_since ?
+		days_since_start = last_day_since : days_since_start;
 	return *this;
 }
 
 
 gi_date& gi_date::operator-=(int days) {
-	if (-days > last_day_since()) {
+	if (-days > last_day_since) {
 		days_since_start = 0;
 	}
 
 	days_since_start -= days;
 	days_since_start < 0 ? days_since_start = 0 : days_since_start;
-	days_since_start > last_day_since() ?
-		days_since_start = last_day_since() : days_since_start;
+	days_since_start > last_day_since ?
+		days_since_start = last_day_since : days_since_start;
 	return *this;
 }
 
@@ -174,9 +174,6 @@ std::ostream& operator<<(std::ostream& os, const gi_date& dt){
 	return os;
 }
 
-constexpr int gi_date::last_day_since() {
-	return 365 * 3 + 366 - 1;
-}
 
 
 const std::vector<int> gi_date::days_in_months
