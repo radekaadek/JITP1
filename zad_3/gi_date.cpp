@@ -1,6 +1,7 @@
 // Radoslaw Dabkowski (325683)
 
 #include "gi_date.h"
+#include <algorithm>
 
 
 gi_date::gi_date(int day, int month, int year) {
@@ -76,10 +77,8 @@ gi_date& gi_date::operator+=(int days) {
 		days_since_start = 0;
 	}
 	
-	days_since_start += days;
-	days_since_start < 0 ? days_since_start = 0 : days_since_start;
-	days_since_start > last_day_since ?
-		days_since_start = last_day_since : days_since_start;
+	days_since_start = std::min(std::max(0, days_since_start + days),
+		last_day_since);
 	return *this;
 }
 
@@ -88,11 +87,8 @@ gi_date& gi_date::operator-=(int days) {
 	if (-days > last_day_since) {
 		days_since_start = 0;
 	}
-
-	days_since_start -= days;
-	days_since_start < 0 ? days_since_start = 0 : days_since_start;
-	days_since_start > last_day_since ?
-		days_since_start = last_day_since : days_since_start;
+	days_since_start = std::min(std::max(0, days_since_start - days),
+		last_day_since);
 	return *this;
 }
 
@@ -173,7 +169,6 @@ std::ostream& operator<<(std::ostream& os, const gi_date& dt){
 	os << dt.get_day() << "." << dt.get_month() << "." << dt.get_year();
 	return os;
 }
-
 
 
 const std::vector<int> gi_date::days_in_months

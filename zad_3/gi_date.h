@@ -34,7 +34,7 @@ public:
 	
 private:
     int days_since_start;
-    const int last_day_since = 365 * 3 + 366 - 1;
+    static const int last_day_since = 365 * 3 + 366 - 1;
     static const std::vector<int> days_in_months;
     static int days_in_year(int year);
 };

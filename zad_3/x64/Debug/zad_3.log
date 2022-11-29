@@ -1,5 +1,32 @@
 ﻿  gi_date.cpp
-  zad_3.cpp
-  Generating Code...
-  LINK : C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\x64\Debug\zad_3.exe not found or not built by the last incremental link; performing full link
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\limits.h(70,5): warning C4668: '__STDC_WANT_SECURE_LIB__' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xmemory(156,5): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xmemory(166,5): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\atomic(206,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\atomic(221,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\atomic(237,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.h(40,1): warning C4626: 'gi_date': assignment operator was implicitly defined as deleted
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.h(40,1): warning C5027: 'gi_date': move assignment operator was implicitly defined as deleted
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(127,42): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(14): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(13): message : index 'i' range checked by comparison on this line
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(14): message : feeds call on this line
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(12): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(11): message : index 'i' range checked by comparison on this line
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(12): message : feeds call on this line
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(22): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(21): message : index '' range checked by comparison on this line
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(22): message : feeds call on this line
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(38): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(37): message : index '' range checked by comparison on this line
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(38): message : feeds call on this line
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(33): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(32): message : index '' range checked by comparison on this line
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(33): message : feeds call on this line
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(54): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(53): message : index '' range checked by comparison on this line
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(54): message : feeds call on this line
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(49): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(48): message : index '' range checked by comparison on this line
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\gi_date.cpp(49): message : feeds call on this line
   zad_3.vcxproj -> C:\Users\radek\OneDrive\Pulpit\JITP1\zad_3\x64\Debug\zad_3.exe
