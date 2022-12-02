@@ -1,0 +1,36 @@
+﻿  io_date.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\limits.h(70,5): warning C4668: '__STDC_WANT_SECURE_LIB__' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xmemory(154,5): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xmemory(164,5): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\atomic(93,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\atomic(300,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\atomic(316,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_4\io_date.cpp(4,31): warning C4458: declaration of 'day' hides class member
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_4\io_date.h(8,6): message : see declaration of 'io_date::day'
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_4\io_date.cpp(4,40): warning C4458: declaration of 'month' hides class member
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_4\io_date.h(8,11): message : see declaration of 'io_date::month'
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_4\io_date.cpp(4,51): warning C4458: declaration of 'year' hides class member
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_4\io_date.h(8,18): message : see declaration of 'io_date::year'
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_4\io_date.cpp(27,35): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_4\io_date.h(16,2): warning C4514: 'io_date::io_date': unreferenced inline function has been removed
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xthreads.h(44,30): warning C5264: '_Mtx_internal_imp_alignment': 'const' variable is not used
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xthreads.h(45,30): warning C5264: '_Cnd_internal_imp_size': 'const' variable is not used
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xthreads.h(43,30): warning C5264: '_Mtx_internal_imp_size': 'const' variable is not used
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xthreads.h(46,30): warning C5264: '_Cnd_internal_imp_alignment': 'const' variable is not used
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\utility(127,39): warning C5264: 'std::allocator_arg': 'const' variable is not used
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\typeinfo(28,27): warning C5264: 'std::_Small_object_num_ptrs': 'const' variable is not used
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\system_error(44,28): warning C5264: 'std::is_error_code_enum_v<char>': 'const' variable is not used
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\system_error(44,28): warning C5264: 'std::is_error_code_enum_v<int>': 'const' variable is not used
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\system_error(44,28): warning C5264: 'std::is_error_code_enum_v<std::error_condition>': 'const' variable is not used
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\system_error(44,28): warning C5264: 'std::is_error_code_enum_v<std::error_code>': 'const' variable is not used
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\system_error(44,28): warning C5264: 'std::is_error_code_enum_v<std::system_error>': 'const' variable is not used
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\system_error(44,28): warning C5264: 'std::is_error_code_enum_v<std::_Fillobj<char>>': 'const' variable is not used
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\system_error(44,28): warning C5264: 'std::is_error_code_enum_v<std::_Smanip<std::streamsize>>': 'const' variable is not used
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xtr1common(179,28): warning C5264: 'std::is_integral_v<double>': 'const' variable is not used
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xtr1common(196,28): warning C5264: 'std::is_arithmetic_v<double>': 'const' variable is not used
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\type_traits(667,28): warning C5264: 'std::is_move_constructible_v<std::default_delete<std::_Facet_base>>': 'const' variable is not used
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\utility(114,45): warning C5264: 'std::piecewise_construct': 'const' variable is not used
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\limits(1197,16): warning C5264: 'std::_Is_standard_unsigned_integer<std::_Vbase>': 'const' variable is not used
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_4\io_date.cpp(52): warning C4702: unreachable code
+C:\Users\radek\OneDrive\Pulpit\JITP1\zad_4\io_date.cpp(59): warning C4702: unreachable code
+  zad_4.vcxproj -> C:\Users\radek\OneDrive\Pulpit\JITP1\zad_4\x64\Debug\zad_4.exe
