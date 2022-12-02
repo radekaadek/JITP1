@@ -1,3 +1,5 @@
+// Radoslaw Dabkowski (325683)
+
 #pragma once
 
 #include <iostream>

@@ -1,3 +1,5 @@
+// Radoslaw Dabkowski (325683)
+
 #include "io_date.h"
 #include <iomanip>
 
@@ -23,7 +25,7 @@ int io_date::days_in_month(int month, int year) {
 	if (month == 2 && is_leap_year(year)) {
 		return 29;
 	}
-	int month_index = month - 1;
+	uint8_t month_index = month - 1;
 	return days_in_months[month_index];
 }
 
@@ -46,8 +48,8 @@ std::istream& operator>>(std::istream& is, io_date& dt) {
 	int year, month, day;
 	char sep1, sep2;
 	if (is >> year >> sep1 >> month >> sep2 >> day) {
-		// check if input is still not empty
-		if (!is.eof() || sep1 != '-' || sep2 != '-' || !io_date::is_valid(day, month, year)) {
+		if (sep1 != '-' || sep2 != '-' ||
+				!io_date::is_valid(day, month, year)) {
 			throw std::runtime_error("Invalid input date.");
 			is.setstate(std::ios_base::failbit);
 			return is;

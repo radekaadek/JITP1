@@ -27,7 +27,6 @@ void test_invalid_date(string input) {
 		cout << "ERROR: " << input << " -> " << dt << endl;
 	}
 	catch (runtime_error& e) {
-		cout << "OK: " << input << " -> " << e.what() << endl;
 	}
 }
 
@@ -82,19 +81,36 @@ int main()
 	test_valid_date("2023-11-30");
 	test_valid_date("2023-12-31");
 
-	
+
 	test_invalid_date("2020-02-30");
+	test_invalid_date("2020--02--29");
+	test_invalid_date("0000-00-00");
+	test_invalid_date("2147483648-02-29");
+	test_invalid_date("2147483648-02-29");
+	test_invalid_date("-2147483647-02-29");
+	test_invalid_date("-2147483648-13-01");
+	test_invalid_date("2147485667-12-32");
+	test_invalid_date("2020-04-0");
 	test_invalid_date("2020-04-31");
 	test_invalid_date("2020-06-31");
 	test_invalid_date("2020-09-31");
 	test_invalid_date("2020-11-31");
-	test_invalid_date("2021-02-29");
 	test_invalid_date("");
-	test_invalid_date("2020-02-29-");
 	test_invalid_date("1-02-29");
-	test_invalid_date("2020-1-");
+	test_invalid_date("2020-01-");
 	test_invalid_date("2020-\n-15");
-	test_invalid_date("");
+	test_invalid_date("-----");
+	test_invalid_date("--02-02");
+	
+	// test every character on input
+	for (int i = 0; i < 256; ++i) {
+		if (i >= '0' && i <= '9') {
+			continue;
+		}
+		string input = "2020-01-01";
+		input[6] = static_cast<char>(i);
+		test_invalid_date(input);
+	}
 	
 	
 	
