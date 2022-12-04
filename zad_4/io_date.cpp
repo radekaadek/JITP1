@@ -50,15 +50,14 @@ std::istream& operator>>(std::istream& is, io_date& dt) {
 	if (is >> year >> sep1 >> month >> sep2 >> day) {
 		if (sep1 != '-' || sep2 != '-' ||
 				!io_date::is_valid(day, month, year)) {
-			throw std::runtime_error("Invalid input date.");
 			is.setstate(std::ios_base::failbit);
+			throw std::runtime_error("Invalid input date.");
 			return is;
 		}
 		dt.set_members(day, month, year);
 	}
 	else {
 		throw std::runtime_error("Invalid input date.");
-		is.setstate(std::ios_base::failbit);
 	}
 	return is;
 }
