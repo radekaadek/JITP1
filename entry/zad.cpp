@@ -47,4 +47,44 @@ int main() {
 		std::cout << e << std::endl;
 
 	}
+	{
+		std::string s = "[]";
+		// test s as >> input to entry
+		std::istringstream is(s);
+		entry e;
+		is >> e;
+		std::cout << e << std::endl;
+	}
+	{
+		std::string s = "[123]";
+		// test s as >> input to entry
+		std::istringstream is(s);
+		entry e;
+		is >> e;
+		std::cout << e << std::endl;
+	}
+	{
+		std::string s = "<>";
+		// test s as >> input to entry
+		std::istringstream is(s);
+		entry e;
+		is >> e;
+		std::cout << e << std::endl;
+	}
+	{
+		std::string s = "[xyz --]";
+		// test s as >> input to entry
+		std::istringstream is(s);
+		entry e;
+		is >> e;
+		std::cout << e << std::endl;
+	}
+	{
+		std::string s = "[abc xyz]";
+		// test s as >> input to entry
+		std::istringstream is(s);
+		entry e;
+		is >> e;
+		std::cout << e << std::endl;
+	}
 }
