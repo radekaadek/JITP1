@@ -2,8 +2,7 @@
 #include <iostream>
 
 
-class entry
-{
+class entry {
 public:
 	entry(const std::string& s = "") : val(s), cnt(0) {}
 	std::string operator*() const { return val; }

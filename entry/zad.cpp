@@ -3,12 +3,12 @@
 
 int main() {
 	{
-		std::string s = "[Yossarian 1]";
+		std::string s = "[Yossarian 1] [Clevinger 2]";
 		// test s as >> input to entry
 		std::istringstream is(s);
-		entry e;
-		is >> e;
-		std::cout << e << std::endl;
+		entry e, b;
+		is >> e >> b;
+		std::cout << e << b << std::endl;
 
 	}
 	{
