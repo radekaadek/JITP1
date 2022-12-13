@@ -10,13 +10,13 @@ std::ostream& operator<<(std::ostream& os, const entry& e) {
 
 
 std::istream& operator>>(std::istream& is, entry& e) {
-	// read characters from is into a string
+	// read characters from istream into a string
 	// untill a regex match is found
 	// if no match is found, set failbit and return is
 	// if a match is found, set the e.val and e.cnt
-	// and return is
-	std::string s;
-	std::string pattern = R"(\[[^\[\]]+[\s]\d+[\]])";
+
+	std::string s = "";
+	std::string pattern = R"(\[\S[\S ]*\b \d+\])";
 	char c;
 	while (is.get(c)) {
 		s += c;

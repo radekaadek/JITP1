@@ -80,7 +80,7 @@ int main() {
 		std::cout << e << std::endl;
 	}
 	{
-		std::string s = "[abc xyz]";
+		std::string s = "[32 32]";
 		// test s as >> input to entry
 		std::istringstream is(s);
 		entry e;
