@@ -16,7 +16,7 @@ std::istream& operator>>(std::istream& is, entry& e) {
 	// if a match is found, set the e.val and e.cnt
 
 	std::string s = "";
-	std::string pattern = R"(\[\S[\S ]*\b \d+\])";
+	std::string pattern = R"(\[[a-zA-Z0-9][[a-zA-Z0-9 ]*\b \d+\])";
 	char c;
 	while (is.get(c)) {
 		s += c;

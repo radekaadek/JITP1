@@ -87,4 +87,12 @@ int main() {
 		is >> e;
 		std::cout << e << std::endl;
 	}
+	{
+		std::string s = "[milo -32]";
+		// test s as >> input to entry
+		std::istringstream is(s);
+		entry e;
+		is >> e;
+		std::cout << e << std::endl;
+	}
 }
