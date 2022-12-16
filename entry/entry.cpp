@@ -31,5 +31,6 @@ std::istream& operator>>(std::istream& is, entry& e) {
 		}
 	}
 	is.setstate(std::ios_base::failbit);
+	throw std::runtime_error("Wrong input");
 	return is;
 }

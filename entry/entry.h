@@ -4,7 +4,7 @@
 
 class entry {
 public:
-	entry(const std::string& s = "") : val(s), cnt(0) {}
+	entry(const std::string& s = "", int val = 0) : val(s), cnt(val) {}
 	std::string operator*() const { return val; }
 	operator int() const { return cnt; }
 	int operator++(int) { int tmp = cnt; cnt++; return tmp; }

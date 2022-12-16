@@ -1,4 +1,4 @@
-﻿  entry.cpp
-  zad.cpp
-  Generating Code...
+﻿  zad.cpp
+C:\Users\radek\OneDrive\Pulpit\JITP1\entry\zad.cpp(7,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\radek\OneDrive\Pulpit\JITP1\entry\zad.cpp(42,6): warning C4189: 'max': local variable is initialized but not referenced
   entry.vcxproj -> C:\Users\radek\OneDrive\Pulpit\JITP1\entry\x64\Debug\entry.exe
