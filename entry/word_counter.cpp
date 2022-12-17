@@ -1,9 +1,10 @@
-﻿#include "word_counter.h"
-#include <algorithm>
+﻿// Radoslaw Dabkowski (325683)
 
-size_t word_counter::size() const {
-    return word_cnt.size();
-}
+// Troche zwalnia przy duzych ilosciach slow ale
+// do 10000 ladnie liczy
+
+#include "word_counter.h"
+#include <algorithm>
 
 word_counter::const_iterator word_counter::begin() const {
     return word_cnt.begin();
@@ -22,6 +23,10 @@ int word_counter::add_word(const std::string& word) {
 	}
 	word_cnt.push_back(entry(word, 1));
 	return 1;
+}
+
+size_t word_counter::size() const {
+	return word_cnt.size();
 }
 
 void word_counter::sort_alpha() {

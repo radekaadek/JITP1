@@ -40,7 +40,8 @@ int main() {
 	}
 	std::string word;
 	int max = 0;
-	while (is >> word) {
+	for (int i = 0; i < 10000; i++) {
+		is >> word;
 		md_cnt.add_word(word);
 	}
 	is.close();

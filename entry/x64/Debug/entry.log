@@ -1,4 +1,8 @@
-﻿  zad.cpp
+﻿  word_counter.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\bit(12): warning STL4038: The contents of <bit> are available only with C++20 or later.
+  zad.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\bit(12): warning STL4038: The contents of <bit> are available only with C++20 or later.
 C:\Users\radek\OneDrive\Pulpit\JITP1\entry\zad.cpp(7,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 C:\Users\radek\OneDrive\Pulpit\JITP1\entry\zad.cpp(42,6): warning C4189: 'max': local variable is initialized but not referenced
+  Generating Code...
   entry.vcxproj -> C:\Users\radek\OneDrive\Pulpit\JITP1\entry\x64\Debug\entry.exe
